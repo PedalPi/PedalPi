@@ -4,6 +4,7 @@ from load_module import load_module
 
 load_module('application')
 load_module('webservice')
+load_module('physical')
 
 from application.Application import Application
 from webservice.WebService import WebService

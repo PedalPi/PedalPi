@@ -4,3 +4,6 @@
 [submodule "webservice"]
 	path = webservice
 	url = git@github.com:PedalPi/WebService.git
+[submodule "physical"]
+	path = physical
+	url = git@github.com:PedalPi/Physical.git
