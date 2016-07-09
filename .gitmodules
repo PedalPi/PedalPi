@@ -1,0 +1,6 @@
+[submodule "application"]
+	path = application
+	url = https://github.com/PedalPi/Application
+[submodule "webservice"]
+	path = webservice
+	url = git@github.com:PedalPi/WebService.git
