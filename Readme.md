@@ -21,3 +21,9 @@ pip3 install -r requirements.txt
 source ./PedalPi/bin/activate
 python3 start.py
 ```
+
+## To send your changes from your PC to Raspberry
+
+```
+rsync -Cravzp --delete-after <path to project>/PedalPi-Raspberry/ pi@<IP address>:<Raspberry path> --exclude-from=.gitignore
+```

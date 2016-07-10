@@ -8,12 +8,12 @@ load_module('physical')
 
 from application.Application import Application
 from webservice.WebService import WebService
-#from physical.Physical import Physical
+from physical.Physical import Physical
 
 
 application = Application(dataPatch="data/", test=True)
 webService = WebService(application)
-#physical = Physical(application)
+physical = Physical(application)
 
 app = webService.prepare()
 app.listen(3000)

@@ -2,3 +2,6 @@ pedal_pi.nja
 .idea/
 PedalPi/
 **.pyc
+__pycache__/
+**.egg-info/
+
