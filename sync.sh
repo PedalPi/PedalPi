@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Usage
 # sh ./sync.sh <user>@<ip address> <rpi folder>
 

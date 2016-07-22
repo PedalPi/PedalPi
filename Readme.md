@@ -9,7 +9,7 @@ git clone --recursive https://github.com/PedalPi/WebService
 
 sudo pip3 install virtualenv
 
-virtualenv PedalPi
+virtualenv -p python3 PedalPi
 source ./PedalPi/bin/activate
 
 pip3 install -r requirements.txt

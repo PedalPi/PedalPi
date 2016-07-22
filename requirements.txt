@@ -7,3 +7,4 @@ pyparsing==2.1.4
 rdflib==4.2.1
 requests==2.10.0
 tornado==4.3
+tornado-cors==0.6.0
