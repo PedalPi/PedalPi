@@ -13,7 +13,7 @@ from physical.Physical import Physical
 
 application = Application(dataPatch="data/", test=True)
 webService = WebService(application)
-#physical = Physical(application)
+physical = Physical(application)
 
 app = webService.prepare()
 app.listen(3000)
