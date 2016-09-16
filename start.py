@@ -11,7 +11,7 @@ from webservice.WebService import WebService
 from physical.Physical import Physical
 
 
-application = Application(dataPatch="data/", test=True)
+application = Application(data_patch="data/", address='localhost', test=False)
 webService = WebService(application)
 #physical = Physical(application)
 
