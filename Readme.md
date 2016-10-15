@@ -5,7 +5,7 @@ PedalPi implementation for Raspberry
 ## To "install" (use for development)
 
 ```bash
-git clone --recursive https://github.com/PedalPi/WebService
+git clone --recursive https://github.com/PedalPi/PedalPi-Raspberry --depth=1
 
 sudo pip3 install virtualenv
 
