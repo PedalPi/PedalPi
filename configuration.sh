@@ -19,6 +19,38 @@ cd mod-host
 sudo apt-get install -f
 sudo apt-get install libjack-jackd2-dev liblilv-dev libargtable2-dev libreadline-dev lilv-utils -y
 make
+cd ~/Desktop
+
+# Lilv
+# See https://github.com/moddevices/lilvlib/blob/master/build-python3-lilv.sh
+# See https://github.com/moddevices/lilvlib/blob/master/docker/trusty_python34.docker
+#sudo apt-get install --no-install-recommends debhelper devscripts dpkg-dev git pkg-config python3-all-dev python3-numpy subversion swig libpcre3-dev -y
+#git clone
+#git clone https://github.com/moddevices/lilvlib lilvlib --depth=1
+#cd lilvlib
+#echo "I need create a patch for ./build-python3-lilv.sh changes (https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=139091&p=p934640#p934640)"
+#sh ./build-python3-lilv.sh
+#sudo dpkg -i python3-lilv_0.22.1+git20160613_armhf.deb
+
+mkdir lilv
+cd lilv
+
+wget http://lv2plug.in/spec/lv2-1.14.0.tar.bz2
+tar -jxvf lv2-1.14.0.tar.bz2
+cd lv2-1.14.0/
+./waf configure && ./waf build -j2 && sudo ./waf install
+cd ..
+
+wget wget http://git.drobilla.net/cgit.cgi/sord.git/snapshot/sord-0.14.0.tar.gz
+tar -xvf sord-0.14.0.tar.gz
+cd sord-0.14.0/
+./waf configure && ./waf && sudo ./waf install
+cd ..
+
+wget http://git.drobilla.net/cgit.cgi/lilv.git/snapshot/lilv-0.24.0.tar.gz
+tar -xvf lilv-0.24.0.tar.gz
+cd lilv-0.24.0/
+./waf configure && ./waf && sudo ./waf install
 
 # PedalPi - Raspberry
 # Read README.md  https://github.com/PedalPi/PedalPi-Raspberry
