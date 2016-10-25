@@ -10,11 +10,12 @@ from application.Application import Application
 from webservice.WebService import WebService
 from physical.physical import Physical
 
-address = 'localhost' # '10.0.0.203'
+address = 'raspberrypi.local'
+#address = '10.0.0.102'
 
 application = Application(data_patch="data/", address=address, test=True)
 webService = WebService(application)
-physical = Physical(application, test=False)
+physical = Physical(application, test=True)
 
 app = webService.prepare()
 app.listen(3000)

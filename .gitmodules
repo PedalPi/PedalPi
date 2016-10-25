@@ -3,7 +3,7 @@
 	url = https://github.com/PedalPi/Application
 [submodule "webservice"]
 	path = webservice
-	url = git@github.com:PedalPi/WebService.git
+	url = https://github.com/PedalPi/WebService
 [submodule "physical"]
 	path = physical
-	url = git@github.com:PedalPi/Physical.git
+	url = https://github.com/PedalPi/Physical
