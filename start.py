@@ -12,15 +12,16 @@ from physical.physical import Physical
 
 address = 'raspberrypi.local'
 #address = '10.0.0.102'
+port = 3000
 
 application = Application(data_patch="data/", address=address, test=True)
 webService = WebService(application)
-physical = Physical(application, test=True)
+physical = Physical(application, test=False)
 
 app = webService.prepare()
-app.listen(3000)
+app.listen(port)
 
-print("PedalController API REST      localhost:3000")
-print("PedalController API WebSocket localhost:3000/ws")
+print("PedalController API REST      localhost:" + str(port))
+print("PedalController API WebSocket localhost:" + str(port) + "/ws")
 
 tornado.ioloop.IOLoop.current().start()
