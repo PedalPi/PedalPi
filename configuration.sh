@@ -56,6 +56,10 @@ tar -xvf lilv-0.24.0.tar.gz
 cd lilv-0.24.0/
 ./waf configure && ./waf && sudo ./waf install
 
+# Adb for RPi 3
+cd ~/Desktop
+git clone --recursive https://github.com/PedalPi/adb-arm --depth=1
+
 # PedalPi - Raspberry
 # Read README.md  https://github.com/PedalPi/PedalPi-Raspberry
 cd ~/Desktop
